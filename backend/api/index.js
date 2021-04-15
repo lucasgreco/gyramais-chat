@@ -1,3 +1,4 @@
+require('dotenv').config()
 const { ApolloServer } = require('apollo-server');
 
 // importação dos typeDefs e Resolvers do Apollo Server
@@ -6,7 +7,7 @@ const resolvers = require("./resolvers");
 
 //conectar com banco de dados.
 const mongoose = require("mongoose");
-const uri = "mongodb+srv://lucasgreco:gyramaisadmin@cluster0.xsivq.mongodb.net/gyramais?retryWrites=true&w=majority";
+const uri = process.env.DB_HOST;
 const dbOptions = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
