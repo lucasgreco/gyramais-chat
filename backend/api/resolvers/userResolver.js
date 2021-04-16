@@ -1,26 +1,51 @@
+const { PubSub } = require('apollo-server');
 const User = require('../models/user')
-
+const USER_LOGIN = 'USER_LOGIN';
+const USERS_ONLINE = 'USERS_ONLINE';
+const USER_LOGGOUT = 'USER_LOGOUT';
 const userResolvers = {
     Query:{
-        users(_,{ chatRoom }) {
-            return User.find({chatRoom: chatRoom}).sort({createdAt:1});
+        users() {
+            return User.find();
         },
-        usersOnline(_,{ chatRoom }){
-            return User.find({chatRoom: chatRoom}).countDocuments();
+        usersOnline(){
+            return User.find().countDocuments();
         }
     },
     Mutation:{
-          loginUser(_, { user }) {
+          loginUser: async (_, { user }, {pubsub}) => {
             const newUser = new User(user);
-            return newUser.save();
+            await newUser.save();
+            pubsub.publish(USER_LOGIN,{userLogin: newUser});
+            pubsub.publish(USERS_ONLINE,{ usersOnline: User.find().countDocuments()});
+            return newUser;
           },
-          logoutUser(_, { nickname }) {
-            return User.findOneAndDelete({nickname: nickname });
+          logoutUser: async (_, { user }, {pubsub}) => {
+            await User.findByIdAndDelete(user.id);
+            pubsub.publish(USER_LOGGOUT,{userLoggout: user});
+            pubsub.publish(USERS_ONLINE,{ usersOnline: User.find().countDocuments()});
+            return 'Usuario deslogado!'
           },
-          updateUser(_, { user }) {
-            return User.replaceOne({nickname: user.nickname }, user);
-          },
+    },
+    Subscription: {
+      userLogin:{
+        subscribe:(_,__, {pubsub}) => {
+          return pubsub.asyncIterator(USER_LOGIN);
+        }
+      },
+      usersOnline:{
+        subscribe:(_,__, {pubsub}) => {
+          return pubsub.asyncIterator(USERS_ONLINE);
+        }
+      },
+      userLoggout:{
+        subscribe:(_,__, {pubsub}) => {
+          return pubsub.asyncIterator(USER_LOGGOUT);
+        }
+      }
     }
 }
+
+const pubsub = new PubSub();
 
 module.exports = userResolvers;

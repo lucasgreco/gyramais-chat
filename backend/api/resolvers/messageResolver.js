@@ -1,13 +1,8 @@
-const { GraphQLScalarType } = require('graphql')
-const Message = require('../models/message')
-
+const { GraphQLScalarType } = require('graphql');
+const { PubSub } = require('apollo-server');
+const Message = require('../models/message');
+const MESSAGE_CREATED = 'MESSAGE_CREATED';
 const messageResolvers = {
-    ChatRoomType:{
-        GERAL:"GERAL",
-        TRABALHO:"TRABALHO",
-        MUSICA:"MUSICA",
-        ESPORTES:"ESPORTES",
-    },
     DateTime: new GraphQLScalarType({
         name:'DateTime',
         description:'string de data e hora no formato ISO-8601',
@@ -16,31 +11,28 @@ const messageResolvers = {
         parseLiteral:(ast) => new Date(ast.value),
     }),
     Query:{
-        messages(_,{ chatRoom }){
-            return Message.find({chatRoom: chatRoom}).sort({createdAt:1});
+        messages(){
+            return Message.find().sort({createdAt:1});
         },
-        message(_, { id }) {
-            return Message.findById(id)
-        }
     },
     Mutation:{
-        createMessage(_, { message }) {
+        createMessage: async (_, { message }, {pubsub} ) => {
             message.createdAt = new Date().toISOString()
             const newMessage = new Message(message);
-            return newMessage.save();
-          },
-          updateMessage(_, { id, message }) {
-            return Message.findByIdAndUpdate(id, message, {
-              new: true,
+            let res = await newMessage.save();
+            pubsub.publish(MESSAGE_CREATED, {
+              newMessage: res
             });
-          },
-          deleteMessage(_, { id }) {
-            return Message.findByIdAndRemove(id);
-          },
-        // atualizaUser: async (root, novosDados, {dataSources}) => dataSources.usersAPI.atualizaUser(novosDados),
-        
-        // deletaUser: async (root, {id}, {dataSources}) => dataSources.usersAPI.deletaUser(id)
+            return res
+          }
+    },
+    Subscription: {
+      newMessage: {
+       subscribe: (_,__,{pubsub}) => pubsub.asyncIterator(MESSAGE_CREATED)
+      }
     }
 };
+
+const pubsub = new PubSub();
 
 module.exports = messageResolvers;

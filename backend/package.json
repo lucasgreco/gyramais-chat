@@ -21,8 +21,10 @@
   "dependencies": {
     "apollo-datasource-rest": "^0.11.0",
     "apollo-server": "^2.22.2",
+    "change-stream-to-async-iterator": "^1.0.2",
     "dotenv": "^8.2.0",
     "graphql": "^15.5.0",
+    "graphql-subscriptions": "^1.2.1",
     "json-server": "^0.16.1",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.3",

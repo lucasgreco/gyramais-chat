@@ -1,9 +1,10 @@
 require('dotenv').config()
-const { ApolloServer } = require('apollo-server');
-
+const { ApolloServer, PubSub } = require('apollo-server');
+const pubsub = new PubSub();
 // importação dos typeDefs e Resolvers do Apollo Server
 const typeDefs = require("./typeDefs");
 const resolvers = require("./resolvers");
+
 
 //conectar com banco de dados.
 const mongoose = require("mongoose");
@@ -21,7 +22,7 @@ mongoose
 
 
 // subindo seridor apollo
-const server = new ApolloServer( { typeDefs,resolvers});
+const server = new ApolloServer( { typeDefs,resolvers,  context: { pubsub }});
 server
     .listen()
     .then(({url})=> console.log(`servidor rodando na porta ${url}`))

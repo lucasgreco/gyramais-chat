@@ -1,13 +1,10 @@
 const mongoose = require('mongoose')
+const User = require('./user');
 
 const MessageSchema = mongoose.Schema({
-    user:String,
+    user:User.schema,
     content: String,
     createdAt:Date,
-    chatRoom:{
-        id:String,
-        name:String,
-    }
 });
 
 module.exports = mongoose.model("Message", MessageSchema);

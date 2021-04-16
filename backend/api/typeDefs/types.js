@@ -4,44 +4,22 @@ const types = gql`
   scalar DateTime
 
   type Message {
-    _id: ID!
-    user:String
+    id: ID!
+    user:User!
     content: String!
     createdAt:DateTime
-    chatRoom:ChatRoom
-  }
-
-  type ChatRoom {
-      id:ID!
-      name: ChatRoomType!
   }
 
   type User{
-    _id:ID!
+    id:ID!
     nickname:String
-    chatRoom:ChatRoom
 }
 
   type Subscription {
-      newMessage: Message
-      newUser:User
-  }
-
-  interface respostaCustom {
-      #tipo abstrato
-      code: Int!
-      mensagem:String!
-  }
-
-  type deletaUserResposta implements respostaCustom {
-      code: Int!
-      mensagem:String!
-  }
-
-  type atualizaUserResposta implements respostaCustom {
-      code: Int!
-      mensagem:String!
-      user: Message!
+    newMessage: Message
+    userLogin:User
+    usersOnline: Int
+    userLoggout:User
   }
 `;
 
