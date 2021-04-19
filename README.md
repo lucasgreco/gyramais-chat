@@ -80,4 +80,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 
 
-[![Linkedin Badge](https://img.shields.io/badge/-Anderson-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/anderson-rocha-852724127/)](https://www.linkedin.com/in/lucas-greco1/) 
+[![Linkedin Badge](https://img.shields.io/badge/-Lucas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucas-greco1/)](https://www.linkedin.com/in/lucas-greco1/) 
