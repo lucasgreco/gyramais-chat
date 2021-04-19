@@ -17,9 +17,7 @@ const types = gql`
 
   type Subscription {
     newMessage: Message
-    userLogin:User
     usersOnline: Int
-    userLogout:User
   }
 `;
 
