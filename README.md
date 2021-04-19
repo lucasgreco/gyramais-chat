@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/npm/v/react?label=React"/> <img src="https://img.shields.io/github/languages/code-size/Andersonrrocha/react-comics"/> <img src="https://img.shields.io/github/last-commit/Andersonrrocha/react-comics"/> <img src="https://img.shields.io/github/license/Andersonrrocha/react-comics"/>
+<img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/><img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/><img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap%20-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white"/><img alt="Apollo-GraphQL" src="https://img.shields.io/badge/-Apollo%20GraphQL-311C87?style=for-the-badge&logo=apollo-graphql"/><img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/>
 # Gyra+ Chat
 
 ## Indice
@@ -13,7 +13,7 @@
 
 
 ## 🔖 Sobre
-O projeto <a href="https://andersonrrocha.github.io/react-comics/">Gyra+ Chat</a> é uma sala de bate papo feita em React, utilizando Node.js no backend. Feito com MongoDB e Apollo GraphQL. Para conectar-se ao chat basta informar um apelido.
+O projeto <a href="https://andersonrrocha.github.io/react-comics/">Gyra+ Chat</a> é uma sala de bate papo em tempo real feita em React, utilizando Node.js no backend. Feito com MongoDB e Apollo GraphQL. Para conectar-se ao chat basta informar um apelido.
 
 
 ## ⚡ Funcionalidades
