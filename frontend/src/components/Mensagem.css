@@ -10,16 +10,16 @@
     margin-top:0;
     text-align: left;
     margin-left: 0.5vw;
-    color: #393232;
+    color: #ddddddd2;
     font-size: 17px;
     font-weight: 400;
 }
 
 .Mensagem .Corpo{
     text-align: left;
-    margin-left: 2vw;
+    margin-left: 1vw;
     color: #FFF;
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 400;
     margin-top:0.5vh;
     margin-bottom: 0.3vh;

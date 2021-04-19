@@ -4,19 +4,30 @@ import './Mensagem.css';
 function Mensagem(props) {
     const token = localStorage.getItem('token');
     let style = {
-        backgroundColor: "#56776c",
+        backgroundColor:"#393e46",
         marginRight: "auto",
         marginLeft:"1vw"
     }
 
     if(props.userId === token){
         style = {
-            backgroundColor:"#5b8a72",
+            backgroundColor:"#38ac85",
             marginLeft: "auto",
             marginRight:"1vw"
         }
 
     }
+    if(props.userId === null){
+        style = {
+            margin:"auto",
+        }
+        return(
+        <div className="Mensagem" style={style}>
+            <p className="Corpo">{props.content}</p>
+        </div>
+        )
+    }
+
     let date = new Date(props.createdAt);
     let hora = (date.getHours()+":"+((date.getMinutes() < 10) ? "0"+ date.getMinutes() : date.getMinutes()));
 

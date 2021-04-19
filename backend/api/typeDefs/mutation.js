@@ -13,7 +13,7 @@ const mutation = gql`
   }
 
   input MessageInput{
-    user:UserInput!
+    user:UserInput
     content: String
     createdAt:DateTime
   }
