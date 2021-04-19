@@ -48,6 +48,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
     # Entrar no diretório do servidor
     $ cd backend
 
+    #Adicione a URI para o mongoDB no arquivo .env
+    DB_HOST=<suaURI>
+    
     # Instalar as dependências
     $ yarn install
 
