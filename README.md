@@ -30,7 +30,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [React](https://pt-br.reactjs.org/)
 - [Node.js](https://nodejs.org/en/) (14.16.1)
 - [Apollo GraphQL](https://www.apollographql.com/) 
-- [MongoDB](https://www.mongodb.com/) 
+- [MongoDB](https://www.mongodb.com/) (Cloud)
 
 
 ##### Recursos adicionais utilizados
