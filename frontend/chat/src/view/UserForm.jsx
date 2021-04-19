@@ -2,21 +2,34 @@ import React, { useState } from "react";
 import {Container, Row, Col, Button} from 'react-bootstrap';
 import "./UserForm.css"
 import { useMutation } from '@apollo/client';
+import { useHistory } from 'react-router-dom';
 import {
     UserLoginMutation
   } from '../data/Query';
 export default function UserForm(props) {
-
+    
+    //inicializa hooks
+    const history = useHistory();
     const [userState, setUserState] = useState({
         id:'',
         nickname: '',
       });
+
+
+    //verifica se usuário ja está logado e redireciona para o chat
+    let user = localStorage.getItem('token');
+    if(user){
+        history.push("/chat");
+    }
+
+
     
     const [loginUser] = useMutation(UserLoginMutation,
         {
           onCompleted({ loginUser }) {
             if (loginUser) {
               localStorage.setItem('token', loginUser.id);
+              history.push("/chat");
             }
           }
         });

@@ -68,8 +68,8 @@ const UserLoginMutation = gql`
 `;
 
 const UserLogoutMutation = gql`
-  mutation($id:ID!){
-    logoutUser(id:$id)
+  mutation($id:ID!, $nickname:String!){
+    logoutUser(user:{id:$id,nickname:$nickname})
   }
 `;
 

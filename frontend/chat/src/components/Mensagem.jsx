@@ -3,7 +3,6 @@ import './Mensagem.css';
 
 function Mensagem(props) {
     const token = localStorage.getItem('token');
-    console.log(props.userId);
     let style = {
         backgroundColor: "#56776c",
         marginRight: "auto",

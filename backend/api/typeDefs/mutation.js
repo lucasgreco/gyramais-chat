@@ -9,7 +9,7 @@ const mutation = gql`
     loginUser(user:UserInput):User
 
     #deslogar usuario
-    logoutUser(id:ID!):String
+    logoutUser(user:UserInput):String
   }
 
   input MessageInput{
