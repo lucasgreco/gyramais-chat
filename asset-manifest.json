@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/gyramais-chat/static/css/main.e166011e.chunk.css",
+    "main.js": "/gyramais-chat/static/js/main.46ebf3e5.chunk.js",
+    "main.js.map": "/gyramais-chat/static/js/main.46ebf3e5.chunk.js.map",
+    "runtime-main.js": "/gyramais-chat/static/js/runtime-main.dbf53ab1.js",
+    "runtime-main.js.map": "/gyramais-chat/static/js/runtime-main.dbf53ab1.js.map",
+    "static/css/2.6ebea123.chunk.css": "/gyramais-chat/static/css/2.6ebea123.chunk.css",
+    "static/js/2.b0347c6a.chunk.js": "/gyramais-chat/static/js/2.b0347c6a.chunk.js",
+    "static/js/2.b0347c6a.chunk.js.map": "/gyramais-chat/static/js/2.b0347c6a.chunk.js.map",
+    "index.html": "/gyramais-chat/index.html",
+    "static/css/2.6ebea123.chunk.css.map": "/gyramais-chat/static/css/2.6ebea123.chunk.css.map",
+    "static/css/main.e166011e.chunk.css.map": "/gyramais-chat/static/css/main.e166011e.chunk.css.map",
+    "static/js/2.b0347c6a.chunk.js.LICENSE.txt": "/gyramais-chat/static/js/2.b0347c6a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dbf53ab1.js",
+    "static/css/2.6ebea123.chunk.css",
+    "static/js/2.b0347c6a.chunk.js",
+    "static/css/main.e166011e.chunk.css",
+    "static/js/main.46ebf3e5.chunk.js"
+  ]
+}
