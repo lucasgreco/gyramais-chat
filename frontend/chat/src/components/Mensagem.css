@@ -1,0 +1,34 @@
+.Mensagem{
+    border-radius: 15px;
+    width: fit-content;
+    padding: 6px 7px 8px 9px;
+    margin-bottom: 2vh;
+}
+
+.Mensagem .Titulo{
+    margin-bottom: 0;
+    margin-top:0;
+    text-align: left;
+    margin-left: 0.5vw;
+    color: #393232;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.Mensagem .Corpo{
+    text-align: left;
+    margin-left: 2vw;
+    color: #FFF;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top:0.5vh;
+    margin-bottom: 0.3vh;
+}
+
+.Mensagem .Hora{
+    font-size: 14px;
+    text-align: right;
+    color: lightgray;
+    margin-right: 1vw;
+    margin-left: 2vw;
+}

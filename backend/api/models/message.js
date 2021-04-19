@@ -2,7 +2,10 @@ const mongoose = require('mongoose')
 const User = require('./user');
 
 const MessageSchema = mongoose.Schema({
-    user:User.schema,
+    user:{
+        id:String,
+        nickname:String,
+    },
     content: String,
     createdAt:Date,
 });

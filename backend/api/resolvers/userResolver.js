@@ -5,6 +5,9 @@ const USERS_ONLINE = 'USERS_ONLINE';
 const USER_LOGGOUT = 'USER_LOGOUT';
 const userResolvers = {
     Query:{
+        user(_,{id}){
+            return User.findById(id);
+        },
         users() {
             return User.find();
         },
@@ -38,7 +41,7 @@ const userResolvers = {
           return pubsub.asyncIterator(USERS_ONLINE);
         }
       },
-      userLoggout:{
+      userLogout:{
         subscribe:(_,__, {pubsub}) => {
           return pubsub.asyncIterator(USER_LOGGOUT);
         }

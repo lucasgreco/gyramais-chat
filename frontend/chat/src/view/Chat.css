@@ -1,0 +1,62 @@
+.Chat{
+    margin-top: auto;
+    margin:auto;
+    width: 50%;
+    background-color: #e48257;
+    border-radius: 10px;
+    border: 3px solid #e48257;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    padding-bottom: 1vh;
+}
+
+.Chat .Title{
+    padding: 10px 0px;
+    display: flex;
+
+}
+
+.Chat .Title span{
+    font-size: 25px;
+
+}
+
+.Chat .Content{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: #464f41;
+    color: #000;
+    overflow: auto;
+    height: 60vh;
+}
+
+.Chat .send-message {
+    margin-top: 2vh;
+    height: 10vh;
+}
+
+.Chat .send-message textarea{
+    padding-right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 0px 0px 15px;
+    resize: none;
+    outline: none;
+    padding: 1vh;
+}
+
+.send-message-input{
+    height: 100%;
+    padding-right: 0;
+}
+
+.send-message-button{
+    padding-left: 0;
+}
+.send-message-button Button{
+    font-size: 25px;
+    border-radius: 0px 15px 15px 0px;
+}
+.logout-button{
+    margin-left: auto;
+}

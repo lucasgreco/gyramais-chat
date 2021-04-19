@@ -19,7 +19,7 @@ const mutation = gql`
   }
 
   input UserInput{
-    id:ID!
+    id:ID
     nickname:String!
   }
 `;

@@ -11,7 +11,7 @@ const types = gql`
   }
 
   type User{
-    id:ID!
+    id:ID
     nickname:String
 }
 
@@ -19,7 +19,7 @@ const types = gql`
     newMessage: Message
     userLogin:User
     usersOnline: Int
-    userLoggout:User
+    userLogout:User
   }
 `;
 
