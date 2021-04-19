@@ -1,5 +1,5 @@
 import React from 'react'
-import './BotaoLogout.css';
+import './LogoutButton.css';
 import { useMutation } from '@apollo/client';
 import { useHistory } from 'react-router-dom';
 import { Button} from 'react-bootstrap';
@@ -7,7 +7,7 @@ import {
     UserLogoutMutation
   } from '../data/Query';
 
-function BotaoLogout(props) {
+function LogoutButton(props) {
     const history = useHistory();
     const user = props.user;
 
@@ -34,4 +34,4 @@ function BotaoLogout(props) {
         </>
     )
 }
-export default BotaoLogout;
+export default LogoutButton;

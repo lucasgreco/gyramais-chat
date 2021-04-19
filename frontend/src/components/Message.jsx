@@ -1,7 +1,7 @@
 import React from 'react'
-import './Mensagem.css';
+import './Message.css';
 
-function Mensagem(props) {
+function Message(props) {
     const token = localStorage.getItem('token');
     let style = {
         backgroundColor:"#393e46",
@@ -22,7 +22,7 @@ function Mensagem(props) {
             margin:"auto",
         }
         return(
-        <div className="Mensagem" style={style}>
+        <div className="Message" style={style}>
             <p className="Corpo">{props.content}</p>
         </div>
         )
@@ -32,11 +32,11 @@ function Mensagem(props) {
     let hora = (date.getHours()+":"+((date.getMinutes() < 10) ? "0"+ date.getMinutes() : date.getMinutes()));
 
     return(
-        <div className="Mensagem" style={style}>
+        <div className="Message" style={style}>
             <h2 className="Titulo">{props.user}</h2>
             <p className="Corpo">{props.content} <span className="Hora">{hora}</span></p>
         </div>
     )
 }
 
-export default Mensagem;
+export default Message;

@@ -1,11 +1,11 @@
-.Mensagem{
+.Message{
     border-radius: 15px;
     width: fit-content;
     padding: 6px 7px 8px 9px;
     margin-bottom: 2vh;
 }
 
-.Mensagem .Titulo{
+.Message .Titulo{
     margin-bottom: 0;
     margin-top:0;
     text-align: left;
@@ -15,7 +15,7 @@
     font-weight: 400;
 }
 
-.Mensagem .Corpo{
+.Message .Corpo{
     text-align: left;
     margin-left: 1vw;
     color: #FFF;
@@ -25,7 +25,7 @@
     margin-bottom: 0.3vh;
 }
 
-.Mensagem .Hora{
+.Message .Hora{
     font-size: 14px;
     text-align: right;
     color: lightgray;

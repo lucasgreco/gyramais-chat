@@ -1,15 +1,14 @@
-import React,  {  useEffect, useRef, useState } from "react";
+import React,  {  useEffect, useRef } from "react";
 import { useQuery } from '@apollo/client';
 
-import './MensagensContainer.css';
-import Mensagem from "./Mensagem";
+import Message from "./Message";
 import {
     MessagesQuery,
     NewMessageSubscription
   } from '../data/Query';
 
-function MensagensContainer(_) {
-    let mensagens = [];
+function MessagesContainer(_) {
+    let messages = [];
 
     //funcionamento do scroll bar
     const messagesEndRef = useRef(null);
@@ -18,7 +17,7 @@ function MensagensContainer(_) {
             messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
         }
     };
-    useEffect(scrollToBottom, [mensagens]);
+    useEffect(scrollToBottom, [messages]);
 
     //query das mensagens com subscribe
     const  { loading, error, data, subscribeToMore } = useQuery(MessagesQuery);
@@ -36,21 +35,21 @@ function MensagensContainer(_) {
   if ( loading  ) return <p>Loading...</p>;
   if ( error ) return <p>Error :(</p>;
   if(data) {
-    mensagens = data.messages;
+    messages = data.messages;
   }
 
 
-  const mensagensLi = mensagens.map((mensagem) => {
+  const messagesLi = messages.map((message) => {
     return (
-      <Mensagem key={mensagem.id} userId={mensagem.user.id} user={mensagem.user.nickname} content={mensagem.content} createdAt={mensagem.createdAt} />
+      <Message key={message.id} userId={message.user.id} user={message.user.nickname} content={message.content} createdAt={message.createdAt} />
     )
   })
 
     return(
         <>
-            {mensagensLi}
+            {messagesLi}
             <div ref={messagesEndRef} />
         </>
     )
 }
-export default MensagensContainer;
+export default MessagesContainer;
