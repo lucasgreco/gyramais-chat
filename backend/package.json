@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alura-cursos/1922-graphql.git"
+    "url": "git+https://github.com/lucasgreco/gyramais-chat.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alura-cursos/1922-graphql/issues"
+    "url": "https://github.com/lucasgreco/gyramais-chat/issues"
   },
-  "homepage": "https://github.com/alura-cursos/1922-graphql#readme",
+  "homepage": "https://github.com/lucasgreco/gyramais-chat#readme",
   "dependencies": {
     "apollo-datasource-rest": "^0.11.0",
     "apollo-server": "^2.22.2",
