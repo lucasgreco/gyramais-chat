@@ -13,7 +13,7 @@
 
 
 ## 🔖 Sobre
-O projeto <a href="http://lucasgreco.github.io/gyramais-chat">Gyra+ Chat </a>é uma sala de bate papo em tempo real feita em React, utilizando Node.js no backend. Feito com MongoDB e Apollo GraphQL. Para conectar-se ao chat basta informar um apelido.
+O projeto Gyra+ Chat é uma sala de bate papo em tempo real feita em React, utilizando Node.js no backend. Feito com MongoDB e Apollo GraphQL. Para conectar-se ao chat basta informar um apelido.
 
 
 ## ⚡ Funcionalidades
@@ -49,7 +49,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
     $ cd backend
 
     #Adicione a URI para o mongoDB no arquivo .env
-    #o arquivo .env do projeto ja tem uma uri para um banco de desenvolvimento no intuito de facilitar testes 
+    
+    #o arquivo .env do projeto ja tem uma uri para um 
+    #banco de desenvolvimento no intuito de facilitar testes 
     DB_HOST=<suaURI>
  
     # Instalar as dependências
